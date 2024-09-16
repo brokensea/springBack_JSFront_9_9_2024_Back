@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8989:80"
+
+  db:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=dockerCompose_erste
+
+  backend:
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: backend/dockerCompose_erste/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_CONFIG_LOCATION=classpath:/application.properties
+    networks:
+      - backend-network
+
+networks:
+  backend-network:
+    driver: bridge

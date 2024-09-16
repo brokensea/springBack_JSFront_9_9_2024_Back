@@ -8,10 +8,10 @@
 		<version>3.3.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>de.sp_10_9_2024</groupId>
-	<artifactId>SP_UebungEinkaufliste</artifactId>
+	<groupId>de.sp</groupId>
+	<artifactId>DockComposeEinkauflist16_9_2024</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SP_UebungEinkaufliste</name>
+	<name>DockComposeEinkauflist16_9_2024</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -89,14 +89,12 @@
     </dependencies>
 
 	<build>
-    <finalName>${project.artifactId}</finalName> <!-- 这将生成项目名作为 JAR 文件名 -->
-
-    <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
-    </plugins>
-</build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
